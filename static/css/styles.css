@@ -1,0 +1,182 @@
+/* General Body Styles */
+body {
+    background-color: #f9f9f9; /* Softer light background */
+    font-family: 'Lora', serif; /* Elegant serif font for text */
+    color: #333; /* Dark text for readability */
+    line-height: 1.7; /* Increased line height for better legibility */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders do not affect overall element size */
+}
+
+/* Header Styles */
+h1, h2 {
+    font-family: 'Lora', sans-serif; /* A sleek, modern sans-serif font */
+    color: #3a3a3a; /* Subtle grayish text for a clean, sophisticated look */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600; /* Medium weight to make the text stand out without being too bold */
+    letter-spacing: 0.5px; /* Adds space between letters for a refined look */
+}
+
+/* Container Styles */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    border-radius: 15px; /* Rounded corners for a smooth appearance */
+    font-family: 'Lora', serif; /* Elegant serif font for the content */
+    overflow: hidden; /* Prevent overflow from child elements */
+}
+
+/* Uploaded Image Container */
+.mt-4 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Uploaded Image Styling */
+.uploaded-image {
+    max-width: 75%;  /* Limit the width of the image to 75% of its container */
+    max-height: 500px;  /* Limit the height to prevent the image from becoming too large */
+    width: auto;  /* Maintain aspect ratio */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* Soft shadow around the image */
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+.uploaded-image:hover {
+    transform: scale(1.05); /* Subtle zoom-in effect on hover */
+}
+
+/* Color Swatch Styling */
+.color-swatch {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow for the swatches */
+    transition: transform 0.3s ease;  /* smooth transform effect */
+}
+
+/* Updated Styles for the Color Swatches Container */
+.dominant-colours-container {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent any child elements from overflowing */
+    max-width: 100%; /* Ensure container stretches to full available width */
+    width: 100%;
+}
+
+/* Use Grid Layout for the Dominant Colors Container */
+.dominant-colors {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal columns */
+    gap: 10px; /* Space between items */
+    justify-items: center; /* Center the items within each column */
+}
+
+/* Styling for Color Items (Swatch, Hex Code, and Button) */
+.color-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+/* Hover effect for color items */
+.color-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for Copy Button */
+.color-item button {
+    width: 100%;
+    border-radius: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for Hex Code and Percentage Text */
+.color-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive Grid for Color Swatches */
+.row-cols-1 {
+    display: block;
+}
+
+.row-cols-md-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for medium and up */
+    gap: 15px; /* Space between columns */
+    margin-right: 0; /* Ensure no margin overflow */
+    width: 100%; /* Ensure grid takes full container width */
+}
+
+/* Chart Container Styles */
+.chart-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive chart image */
+.chart-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .chart-container img {
+        width: 100%;
+    }
+}
+
+/* Handle responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .color-item {
+        width: 33.33%; /* 3 items per row for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .color-item {
+        width: 50%; /* 2 items per row for small screens */
+    }
+}
+
+/* Handle large and extra-large screen responsiveness */
+@media (min-width: 1200px) {
+    .row-cols-md-5 {
+        grid-template-columns: repeat(5, 1fr); /* Ensure 5 columns on large screens */
+        gap: 20px; /* Larger gap for bigger screens */
+    }
+}
