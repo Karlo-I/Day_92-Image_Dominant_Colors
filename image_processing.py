@@ -3,7 +3,6 @@ from collections import Counter
 from PIL import Image
 from color_utils import rgb_distance, rgb_to_hex
 
-# Most dominant colours incl. percentages
 def get_colour_dominance(image_path, num_colours=10, tolerance=50):
     colours = colorgram.extract(image_path, num_colours)
     img = Image.open(image_path)
@@ -11,9 +10,8 @@ def get_colour_dominance(image_path, num_colours=10, tolerance=50):
 
     extracted_colours = [tuple(colour.rgb) for colour in colours] # Extracted colors in a list of RGB tuples
 
-    matched_colours = [] # List of matched colors with a tolerance level
-
     # For each pixel, match it with the extracted colours within tolerance level
+    matched_colours = []
     for pixel in pixels:
         matched = False
         for colour in extracted_colours:
